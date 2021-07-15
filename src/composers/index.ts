@@ -21,7 +21,7 @@ composer.command('help', async ctx => {
   await ctx.reply('To add numbers, do /add. To multiply numbers, do /multiply.');
 });
 
-composer.on('message:text', async ctx => {
+composer.use(async ctx => {
   await ctx.reply('Not a recognised input. If you need help, do /help.');
 });
 
